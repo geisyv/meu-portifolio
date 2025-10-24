@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Portifólio</title>
+</head>
+<body>
+   <div class="particulas"></div>
+
+   <nav class="navegacao">
+      <ul class="menu">
+         <li>
+            <a href="#inicio" class="menu-link">Início</a>
+         </li>
+         <li>
+            <a href="#sobre" class="menu-link">Sobre</a>
+         </li>
+         <li>
+            <a href="#projetos" class="menu-link">Projetos</a>
+         </li>
+         <li>
+            <a href="#contatos" class="menu-link">Contato</a>
+         </li>
+      </ul>
+   </nav>
+
+   <main id="inicio" class="cabecalho"> 
+      <img src="./img/me.jpeg" alt="Foto de Geisy Vasques" class="foto-perfil">
+      <h1>Geisy Vasques</h1>
+      <p class="cabecalho-subtitulo">Desenvolvedora Front End</p>
+   </main>
+
+   <section id="sobre" class="sobre">
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+         <p class="sobre-paragrafo">
+            Profissional em início de carreira, apaixonada por dados e tecnologia, com foco no desenvolvimento de habilidades em Salesforce e Ciência de Dados. Tenho conhecimentos iniciais em administração e desenvolvimento Salesforce e busco constantemente aprender mais para aplicar soluções que tragam valor estratégico. Motivada, dedicada e com grande vontade de evoluir, quero consolidar minha trajetória unindo dados e tecnologia para gerar insights e apoiar a transformação digital das organizações.
+            Experiência com criação de relatórios, dashboards, SOQL, automações com Flow e desenvolvimento com Apex e Lightning Components.
+            Bootcamp intensivo pela Sys4b com foco prático em Salesforce Platform, incluindo integração de dados, segurança, e construção de apps personalizados.
+            Interesse contínuo em soluções orientadas a dados, CRM e crescimento em ambientes colaborativos e ágeis.
+         </p>
+      </div>
+   </section>
+
+   <section id="projetos" class="projetos">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+
+         <div class="projetos-card">
+            <img src="./img/site1.jpg" alt="Projeto 1" class="projetos-imagem">
+            <div class="caixa-textos-projetos">
+               <h3 class="info-projetos">Loja de carros</h3>
+               <p class="paragrafo-projetos">Loja virtual moderna com animacoes suaves e desing responsivo</p>
+            </div>
+         </div>
+
+         <div class="projetos-card">
+            <img src="./img/site2.png" alt="Projeto 2" class="projetos-imagem">
+            <div class="caixa-textos-projetos">
+               <h3 class="info-projetos">Página de Viagens</h3>
+               <p class="paragrafo-projetos">Uma pagina interativa com roteiros das viagens mais cobiçadas do mundo</p>
+            </div>
+         </div>
+
+         <div class="projetos-card">
+            <img src="./img/site3.png" alt="Projeto 3" class="projetos-imagem">
+            <div class="caixa-textos-projetos">
+               <h3 class="info-projetos">Microsoft</h3>
+               <p class="paragrafo-projetos">Página da Microsoft, clone para fins de estudos</p>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+   <section id="contatos" class="contatos">
+      <h2 class="contatos-titulo">Entre em contato</h2>
+      
+      <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+         <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome">
+         </div>
+
+         <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="6"></textarea>
+         </div>
+
+         <button type="submit" class="botao-form">Enviar WhatsApp</button>
+      </form>
+
+   </section>
+
+   <script>
+
+      function enviarWhats(event){
+         event.preventDefault()
+         
+         const nome = document.getElementById('nome').value;
+         const mensagem = document.getElementById('mensagem').value;
+         const telefone = '5511964371888'
+
+         const texto = `Olá! Me chama ${nome}, ${mensagem}`
+         const msgFormatada = encodeURIComponent(texto)
+
+         const url = `https://wa.me/${telefone}/?text=${msgFormatada}`
+
+         window.open(url, '_blank')
+      }
+   
+
+   </script>
+</body>
+</html>
