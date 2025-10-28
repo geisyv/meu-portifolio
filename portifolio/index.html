@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
+
    <title>Portifólio</title>
 </head>
+
 <body>
    <div class="particulas"></div>
 
@@ -26,7 +29,7 @@
       </ul>
    </nav>
 
-   <main id="inicio" class="cabecalho"> 
+   <main id="inicio" class="cabecalho">
       <img src="./img/me.jpeg" alt="Foto de Geisy Vasques" class="foto-perfil">
       <h1>Geisy Vasques</h1>
       <p class="cabecalho-subtitulo">Desenvolvedora Front End</p>
@@ -36,9 +39,15 @@
       <h2 class="sobre-titulo">Sobre Mim</h2>
       <div class="sobre-caixa">
          <p class="sobre-paragrafo">
-            Profissional em início de carreira, apaixonada por dados e tecnologia, com foco no desenvolvimento de habilidades em Salesforce e Ciência de Dados. Tenho conhecimentos iniciais em administração e desenvolvimento Salesforce e busco constantemente aprender mais para aplicar soluções que tragam valor estratégico. Motivada, dedicada e com grande vontade de evoluir, quero consolidar minha trajetória unindo dados e tecnologia para gerar insights e apoiar a transformação digital das organizações.
-            Experiência com criação de relatórios, dashboards, SOQL, automações com Flow e desenvolvimento com Apex e Lightning Components.
-            Bootcamp intensivo pela Sys4b com foco prático em Salesforce Platform, incluindo integração de dados, segurança, e construção de apps personalizados.
+            Profissional em início de carreira, apaixonada por dados e tecnologia, com foco no desenvolvimento de
+            habilidades em Salesforce e Ciência de Dados. Tenho conhecimentos iniciais em administração e
+            desenvolvimento Salesforce e busco constantemente aprender mais para aplicar soluções que tragam valor
+            estratégico. Motivada, dedicada e com grande vontade de evoluir, quero consolidar minha trajetória unindo
+            dados e tecnologia para gerar insights e apoiar a transformação digital das organizações.
+            Experiência com criação de relatórios, dashboards, SOQL, automações com Flow e desenvolvimento com Apex e
+            Lightning Components.
+            Bootcamp intensivo pela Sys4b com foco prático em Salesforce Platform, incluindo integração de dados,
+            segurança, e construção de apps personalizados.
             Interesse contínuo em soluções orientadas a dados, CRM e crescimento em ambientes colaborativos e ágeis.
          </p>
       </div>
@@ -77,7 +86,7 @@
 
    <section id="contatos" class="contatos">
       <h2 class="contatos-titulo">Entre em contato</h2>
-      
+
       <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
          <div class="grupo-form">
             <input placeholder="Nome" class="campo-form" id="nome">
@@ -94,9 +103,11 @@
 
    <script>
 
-      function enviarWhats(event){
+      import { Tabs, TabsPanels, TabsTrigger, TabsContent, TabsTriggerList } from "@/components/retroui/Tab";
+
+      function enviarWhats(event) {
          event.preventDefault()
-         
+
          const nome = document.getElementById('nome').value;
          const mensagem = document.getElementById('mensagem').value;
          const telefone = '5511964371888'
@@ -108,8 +119,10 @@
 
          window.open(url, '_blank')
       }
-   
+
+      
 
    </script>
 </body>
+
 </html>
